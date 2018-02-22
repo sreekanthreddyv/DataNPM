@@ -1,0 +1,27 @@
+# Pandas introduces two new data types to Python
+1) DataFrame
+2) Series
+
+# The DataFrame will represent your entire spreadsheet or rectangular dataa
+
+# The Series is a single column of the DataFrame
+
+	$ df = pd.read_csv("filename.tsv", sep='\t')
+	$ df.head()
+
+# We use the head function so python only shows us the first 5 rows
+
+# "shape" attribute that will give us the number of rows and columns of the DataFrame
+
+	$ df.shape
+
+# The shape attribute returns a tuple, where the first value is the number of rows and the second number is the number of columns
+
+# The column names, is given using the "columns" attribute
+
+	$ df.columns
+
+# The "type" of column names
+	
+	$ df.dtypes
+
