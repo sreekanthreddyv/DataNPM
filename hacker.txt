@@ -1,0 +1,42 @@
+import pandas as pd
+
+pd.DataFrame(dic)
+
+row, col = pd.shape
+
+df.head / df.head(2) / df.tail / df[start:stop]
+
+df.columns
+
+df.<col head> / df['<col head>']
+
+type(df['name']) -> pandas.core.series.Series
+
+only 'df' will print entire DF. to print only few columns use df[['name', 'age']]
+
+df['age'].<max(), mean(), min(), std() #standard deviation 
+
+df.describe()
+
+df[df.age>=25]
+
+df[['name', 'age']][df.age >= 35]
+
+/* https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.Series.html
+
+df.set_index('date') / df.loc['1/3/2017'] / df.reset_index(inplace=True)
+
+$ Different ways of creating DataFrame
+
+	1) Using CSV
+	2) Using excel
+	3) From python dictionary
+	4) From list of tuples
+	5) From list of dictionaries
+
+df = pd.<read_csv, read_excel>
+
+pd.DataFrame(data, columns=['Name', 'nxt', 'sal']) # from list of tuples
+
+/* https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
+
