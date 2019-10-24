@@ -1,10 +1,12 @@
 # Pandas introduces two new data types to Python
-1) DataFrame
-2) Series
+	1) DataFrame
+	2) Series
 
 # The DataFrame will represent your entire spreadsheet or rectangular dataa
 
 # The Series is a single column of the DataFrame
+
+# Read CSV File
 
 	$ df = pd.read_csv("filename.tsv", sep='\t')
 	$ df.head()
@@ -25,3 +27,71 @@
 	
 	$ df.dtypes
 
+# More information using 
+	
+	$ df.info()
+
+# To get only a specific column from out data we can access the data using square brackets.
+
+	$ country_df = df['country'] 
+	$ country_df.head() # First Five
+	$ country_df.tail() # Last Five
+
+# To specify multiple columns by the column name, we need to pass in a python "list" between the square brackets.
+
+	$ subset = df[['country', 'continent', 'year']]
+
+# Use the ".loc" method on the dataframe to subset rows based on the index level
+	
+	$ df.loc[0] # First row
+	$ df.loc[99] # 100th row
+
+# select the first, 100th and 1000th row
+	
+	df.loc[[0, 99, 999]]
+
+# slicing the first 3 columns
+	
+	$ df.iloc[:, :3]
+
+import pandas as pd
+
+pd.DataFrame(dic)
+
+row, col = pd.shape
+
+df.head / df.head(2) / df.tail / df[start:stop]
+
+df.columns
+
+df.<col head> / df['<col head>']
+
+type(df['name']) -> pandas.core.series.Series
+
+only 'df' will print entire DF. to print only few columns use df[['name', 'age']]
+
+df['age'].<max(), mean(), min(), std() #standard deviation 
+
+df.describe()
+
+df[df.age>=25]
+
+df[['name', 'age']][df.age >= 35]
+
+/* https://pandas.pydata.org/pandas-docs/version/0.23.4/generated/pandas.Series.html
+
+df.set_index('date') / df.loc['1/3/2017'] / df.reset_index(inplace=True)
+
+$ Different ways of creating DataFrame
+
+	1) Using CSV
+	2) Using excel
+	3) From python dictionary
+	4) From list of tuples
+	5) From list of dictionaries
+
+df = pd.<read_csv, read_excel>
+
+pd.DataFrame(data, columns=['Name', 'nxt', 'sal']) # from list of tuples
+
+/* https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html
